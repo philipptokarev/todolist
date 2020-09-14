@@ -1,0 +1,2 @@
+$("#project-info-<%= project.id %> *").remove();
+$("#project-info-<%= project.id %>").prepend("<%= j render 'info', project: project %>");

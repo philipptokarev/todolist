@@ -1,0 +1,4 @@
+<%= simple_form_for [current_user, project], remote: true do |f| %>
+  <%= f.input :name, label: false %>
+  <%= f.submit "Save", class: "action-button" %>
+<% end %>

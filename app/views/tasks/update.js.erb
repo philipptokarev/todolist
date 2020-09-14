@@ -1,0 +1,4 @@
+$("#new-task-<%= project.id %> .simple_form").remove();
+$("#new-task-<%= project.id %>").append("<%= j render 'form' %>");
+$("#tasks-table-<%= project.id %> tbody tr").remove();
+$("#tasks-table-<%= project.id %> tbody").append("<%= j render project.tasks %>");

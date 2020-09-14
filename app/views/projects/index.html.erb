@@ -1,0 +1,18 @@
+<div class="caption"><h1>simple todo lists</h1><span class="from">from ruby garage</span></div>
+<% if user_signed_in? %>
+  <div class="projects">
+    <%= render projects %>
+  </div>
+  <%= link_to new_user_project_path(user_id: current_user.id), class: "add-project", remote: true do %>
+    <i class='fas fa-plus'></i>
+    <strong>Add TODO List</strong>
+  <% end %>
+<% else %>
+ <div class="welcome">
+   Hello, you must either
+   <%= link_to "register", new_user_registration_path, class: "links" %>
+    or
+   <%= link_to "login", new_user_session_path, class: "links" %>
+    to create a new todo list.
+ </div>
+<% end %>

@@ -1,0 +1,3 @@
+$("#new-task-<%= project.id %> .simple_form input").val("");
+$("#tasks-table-<%= project.id %> tbody tr").remove();
+$("#tasks-table-<%= project.id %> tbody").append("<%= j render project.tasks %>");

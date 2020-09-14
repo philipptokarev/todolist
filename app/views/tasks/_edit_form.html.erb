@@ -1,0 +1,4 @@
+<%= simple_form_for [current_user, project, task], action: :edit, remote: true do |f| %>
+  <%= f.input :name, label: "<i class='fas fa-plus'></i>".html_safe %>
+  <%= f.submit "Edit task", class: "action-button" %>
+<% end %>
