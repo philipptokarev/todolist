@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery
 //= require jquery-ui
+//= require datetimepicker
 //= require_tree .
 $(document).on("turbolinks:load", function() {
   $(".task-check").bind("change", function(){
@@ -32,4 +33,5 @@ $(document).on("turbolinks:load", function() {
       $.post($(this).data("update-url"), $(this).sortable("serialize"));
     }
   });
+  $('#task_deadline').datetimepicker({ format: 'd.m.Y H:i' });
 });

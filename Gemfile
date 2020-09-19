@@ -22,6 +22,10 @@ gem 'simple_form'
 gem 'decent_exposure'
 gem 'acts_as_list'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-datetimepicker'
+end
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

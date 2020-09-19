@@ -1,2 +1,5 @@
 $("#new-task-<%= project.id %> .simple_form").remove();
 $("#new-task-<%= project.id %>").append("<%= j render 'edit_form' %> ");
+$(function () {
+  $("#new-task-<%= project.id %>").find('#task_deadline').datetimepicker({ format: 'd.m.Y H:i' });
+});

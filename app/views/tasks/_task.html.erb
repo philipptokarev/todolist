@@ -5,6 +5,11 @@
   <th class="task-name">
     <%= "#{task.name}" %>
   </th>
+    <th class="task-deadline">
+      <% if task.deadline.present? %>
+          <%= "#{task.deadline.strftime("%d.%m.%Y %H:%M")}" %>
+      <% end %>
+    </th>
   <th class="task-actions">
     <i class="fas fa-arrows-alt-v drag handle"></i>
     <%= link_to edit_user_project_task_path(id: task.id, user_id: current_user.id, project_id: task.project_id), remote: true  do %>

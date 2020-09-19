@@ -1,4 +1,5 @@
 <%= simple_form_for [current_user, project, task], action: :edit, remote: true do |f| %>
-  <%= f.input :name, label: "<i class='fas fa-plus'></i>".html_safe %>
+  <%= f.input :name, label: "<i class='fas fa-plus'></i>".html_safe, input_html: { placeholder: "Task name" } %>
+  <%= f.input :deadline, as: :string, label: false, input_html: { placeholder: "Deadline", autocomplete: "off", value: f.object.deadline.strftime("%d.%m.%Y %H:%M") } %>
   <%= f.submit "Edit task", class: "action-button" %>
 <% end %>

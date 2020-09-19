@@ -1,5 +1,4 @@
 SQL task.
-
 1. Get all statuses, not repeating, alphabetically Ordered
 
 SELECT DISTINCT status FROM tasks ORDER BY status ASC;
@@ -64,3 +63,4 @@ FROM projects, tasks
 GROUP BY projects.id, projects.name
 HAVING COUNT(CASE WHEN tasks.project_id = projects.id AND tasks.status = 'completed' THEN 1 END) > 10
 ORDER BY projects.id;
+
