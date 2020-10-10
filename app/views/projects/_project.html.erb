@@ -11,3 +11,8 @@
     </tbody>
   </table>
 </div>
+<script type="text/javascript">
+  $(function () {
+    $("#new-task-<%= project.id %>").find('#task_deadline').datetimepicker({ format: 'd.m.Y H:i' });
+  });
+</script>

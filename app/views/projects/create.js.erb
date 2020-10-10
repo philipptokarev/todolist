@@ -1,2 +1,6 @@
 $(".projects #project-new").remove();
 $(".projects").append("<%= j render @project %>");
+$(function () {
+  $("#new-task-<%= @project.id %>").find('#task_deadline').datetimepicker({ format: 'd.m.Y H:i' });
+});
+

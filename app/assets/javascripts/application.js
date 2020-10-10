@@ -33,5 +33,4 @@ $(document).on("turbolinks:load", function() {
       $.post($(this).data("update-url"), $(this).sortable("serialize"));
     }
   });
-  $('#task_deadline').datetimepicker({ format: 'd.m.Y H:i' });
 });
